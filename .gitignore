@@ -1,0 +1,38 @@
+# Common files and folders to ignore
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Vim swap files
+*.swp
+*.swo
+.*.sw[mnv]
+
+# Backup files
+*~
+*.bak
+
+# Temporary files
+*.tmp
+
+# Compiled files (if you use a CSS preprocessor)
+*.css.map
+
+# Logs
+*.log
+
+# IDE specific files
+.idea/
+.vscode/
+
+# If you use a static site generator, you might have a dist or build folder
+dist/
+build/
+
+# Add any other files or folders specific to your setup that you don't want in Git
+
