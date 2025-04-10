@@ -1,4 +1,13 @@
 /* Styles specific to the about page */
 h2 {
-  color: green;
+  color: #7CAED3 ;
+  text-align: center;
+}
+h1{
+  text-align: center;
+}
+body{
+  background-color: antiquewhite;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
 }
