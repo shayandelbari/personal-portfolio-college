@@ -1,32 +1,24 @@
-/* Global styles for navigation, footer, etc. */
+:root {
+  --background-color: #222222;
+}
+
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: monospace;
+  background-color: var(--background-color);
+  color: white;
 }
 
 nav {
-  background-color: #f0f0f0;
-  padding: 10px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline;
-  margin-right: 10px;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 40;
+  background-color: var(--background-color) !important;
+  height: 7vh;
+  max-height: 7vh;
 }
 
 footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

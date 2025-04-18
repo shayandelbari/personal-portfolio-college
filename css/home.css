@@ -1,4 +1,81 @@
-/* Styles specific to the home page */
-h1 {
-  color: blue;
+:root {
+  --background-color: #222222;
+}
+
+.carousel-item {
+  height: 93vh;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 93vh;
+  width: 100%;
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 7vh;
+  height: 93vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.welcome-message button {
+  border: 1px solid white;
+}
+
+#project-section {
+  padding: 5vh 0 5vh 0;
+  justify-content: center;
+}
+
+.project-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#project-section .card {
+  background-color: var(--background-color);
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.page-link-project {
+  margin-top: 4vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#about-section,
+#contact-section {
+  padding: 5vh 0;
+  text-align: left;
+  background-color: var(--background-color);
+  color: white;
+}
+
+#about-section h2,
+#contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#about-section p,
+#contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+#about-section a,
+#contact-section a {
+  transition: background-color 0.3s ease;
 }
