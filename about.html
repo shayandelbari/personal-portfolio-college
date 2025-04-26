@@ -31,7 +31,7 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link active" href="about.html">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="projects.html">Projects</a>
@@ -44,37 +44,81 @@
     </nav>
 
     <main>
-      <h1>About Me</h1>
-      <div class="container-fulid">
-        <h2>My bio</h2>
+      <div class="welcome-message">
+        <h1>About Me</h1>
+        <p>Learn about my journey and experiences</p>
+      </div>
 
-        <div class="row">
-          <div class="col-3 text-center">
-            <div class="bio" style="width: 500px">
-              <h2>Name</h2>
-              <p>*Text*</p>
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center">
+            <img
+              class="img-fluid rounded-circle mb-4"
+              src="images/about_sofi.png"
+              alt="About Sofia"
+              style="max-width: 300px;"
+            />
+          </div>
+          <div class="col-md-6">
+            <div class="bio">
+              <h2>Sofia</h2>
+              <p class="lead">Web Developer & Designer</p>
+              <p>I'm passionate about creating beautiful and functional web experiences.
+                 With expertise in front-end development, I bring ideas to life through code and creativity.</p>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="col-3 text-center">
-              <div class="bioImg" style="width: 400px">
-                <img class="imgBio" src="" style="width: 100" />
+      <div id="skills-section" class="bg-light p-5">
+        <div class="container">
+          <h2 class="text-center mb-4">My Skills</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Web Development</h5>
+                  <p class="card-text">HTML, CSS, JavaScript, Bootstrap</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Design</h5>
+                  <p class="card-text">Adobe XD, Photoshop</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Other Skills</h5>
+                  <p class="card-text">Git, RESTful APIs, Responsive Design</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="col-3 text-center">
-            <div class="background" style="width: 400px">
-              <h2>Background</h2>
-              <p>*Text*</p>
+      <div id="experience-section" class="p-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Experience</h2>
+          <div class="timeline">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Education</h5>
+                <p class="card-text">Computer Science Technology Student</p>
+                <p class="text-muted">2023 - Present</p>
+              </div>
             </div>
-          </div>
-
-          <div class="col-3 text-center">
-            <div class="Interests" style="width: 400px">
-              <h2>Interests</h2>
-              <p>*Text*</p>
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Work Experience</h5>
+                <p class="card-text">Web Development Student</p>
+                <p class="text-muted">2023 - Present</p>
+              </div>
             </div>
           </div>
         </div>
