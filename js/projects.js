@@ -1,18 +1,18 @@
 const projects = [
   {
-    title: "Project 1",
-    description: "Description for project 1.",
-    details: "Detailed information about project 1.",
+    title: "Factoid Project",
+    description: "C# Factoid Project",
+    details: "This is a C# Project that allows users to insert a text of their choice, and ask the program to answer a question with the information from the text.",
   },
   {
-    title: "Project 2",
-    description: "Description for project 2.",
-    details: "Detailed information about project 2.",
+    title: "Database Project",
+    description: "Interactive Database.",
+    details: "This project creates a database, which is connected to a website that allows you to add, remove, and filter data based on different criteria.",
   },
   {
-    title: "Project 3",
-    description: "Description for project 3.",
-    details: "Detailed information about project 3.",
+    title: "Vehicle Management System",
+    description: "C# Vehicle Management System.",
+    details: "C# application that allows you to create different types of vehicles that are then stored in an array. The user can then choose to add, remove, or filter the vehicles based on different criteria",
   },
 ];
 
