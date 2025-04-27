@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -44,38 +44,20 @@
       </div>
     </nav>
 
-    <main>
-      <!-- create a from ask user to put his/her name 
-       save the name and i will reuse it for greeting message for customize my webpage -->
-
-      <h1>Contact Us</h1>
-      <p id="greeting">Welcome, Guest</p>
-
-      <label for="name">Enter your name</label>
-      <input type="text" id="name" placeholder="Enter your name" />
-
-      <button onclick="saveName()">Save Name</button>
-
-      <!-- I can use my localStorage and call the user with his/her first name -->
-      <p id="todoList">Guest, This is your To-Do List</p>
-
-      <!--test this line-->
-      <div id="contactFormContainer"></div>
-      <!--placeholder line-->
+    <main class="mt-4">
+      <div class="container">
+        <h1 class="text-center mb-4 text-white">Contact Us</h1>
+        <div id="contactFormContainer"></div>
+      </div>
     </main>
 
-    <footer>
+    <footer class="text-white text-center mt-5">
       <p>&copy; 2025 My Portfolio</p>
     </footer>
     <script src="js/script.js"></script>
     <script src="js/contact.js"></script>
 
     <!-- Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

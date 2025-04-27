@@ -1,10 +1,3 @@
-function saveName() {
-  const name = document.getElementById("name").value;
-  localStorage.setItem("name", name);
-  // no longer necessary   document.getElementById("greeting").textContent = "Welcome, " + name;
-  displayName();
-}
-
 function displayName() {
   const name = localStorage.getItem("name");
   const greeting = document.getElementById("greeting");
@@ -20,25 +13,42 @@ function displayName() {
 }
 
 $(document).ready(function () {
-  displayName();
-
   const formHTML = `
-          <form id="contactForm">
-        <label for="nameInput">Name:</label>
-        <input type="text" id="nameInput"><br><br>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card bg-dark text-white shadow">
+            <div class="card-header bg-secondary text-white">
+              <h4 class="mb-0">Send Us a Message</h4>
+            </div>
+            <div class="card-body bg-dark">
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="nameInput">Name</label>
+                  <input type="text" class="form-control bg-secondary text-white" id="nameInput" name="name" placeholder="Your name">
+                </div>
+                
+                <div class="form-group">
+                  <label for="emailInput">Email</label>
+                  <input type="email" class="form-control bg-secondary text-white" id="emailInput" name="email" placeholder="your.email@example.com">
+                </div>
+                
+                <div class="form-group">
+                  <label for="messageInput">Message</label>
+                  <textarea class="form-control bg-secondary text-white" id="messageInput" name="message" rows="5" placeholder="Your message here..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+              </form>
+              <div id="errorMessage" class="mt-3 text-center"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `; // this is like the solution we did in the files *see file Web-client-15 1, Web-client-16 1, Web-client-17
 
-        <label for="emailInput">Email:</label>
-        <input type="text" id="emailInput"><br><br>
-
-        <label for="messageInput">Message:</label>
-        <textarea id="messageInput"></textarea><br><br>
-
-        <button type="submit">Submit</button>
-      </form>
-      <p id="errorMessage" style="color: red;"></p>
-        `; // this is like the solution we did in the files *see file Web-client-15 1, Web-client-16 1, Web-client-17
-
-  $("#contactFormContainer").html(formHTML); // this is different because this is meing manipulated by jQuery instead of html
+  $("#contactFormContainer").html(formHTML);
 
   // form validation with jQuery
 
@@ -51,20 +61,42 @@ $(document).ready(function () {
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; // taken from online user
 
     if (!name || !email || !message) {
-      $("#errorMessage").css("color", "red").text("Please fill in all fields.");
+      $("#errorMessage")
+        .removeClass()
+        .addClass("alert alert-danger")
+        .text("Please fill in all fields.");
       return;
     }
 
     if (!emailPattern.test(email)) {
       $("#errorMessage")
-        .css("color", "red")
+        .removeClass()
+        .addClass("alert alert-danger")
         .text("Please enter a valid email address.");
       return;
     }
 
-    $("#errorMessage")
-      .css("color", "green")
-      .text("Form submitted successfully!");
-    $("#contactForm")[0].reset();
+    $.ajax({
+      type: "POST",
+      url: "https://getform.io/f/azywvreb",
+      data: JSON.stringify({ name, email, message }),
+      contentType: "application/json",
+      success: function (response) {
+        $("#errorMessage")
+          .removeClass()
+          .addClass("alert alert-success")
+          .text("Your message has been sent successfully!");
+        $("#contactForm")[0].reset(); // reset the form after submission
+      },
+      error: function (xhr, status, error) {
+        console.error("Error:", error);
+        $("#errorMessage")
+          .removeClass()
+          .addClass("alert alert-danger")
+          .text(
+            "There was a problem submitting your form. Please try again later."
+          );
+      },
+    });
   });
 });
