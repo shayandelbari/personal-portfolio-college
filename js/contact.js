@@ -1,17 +1,3 @@
-function displayName() {
-  const name = localStorage.getItem("name");
-  const greeting = document.getElementById("greeting");
-  const todoList = document.getElementById("todoList"); // this isn't get item becauase we want to display text to retrieve values
-
-  if (name) {
-    greeting.textContent = `Welcome, ${name}!`;
-    todoList.textContent = `${name}, This is your To-Do List`;
-  } else {
-    greeting.textContent = "Welcome, Guest";
-    todoList.textContent = "Guest, This is your To-Do List";
-  }
-}
-
 $(document).ready(function () {
   const formHTML = `
     <div class="container">
@@ -94,7 +80,7 @@ $(document).ready(function () {
           .removeClass()
           .addClass("alert alert-danger")
           .text(
-            "There was a problem submitting your form. Please try again later."
+            "There was a problem submitting your form. Please try again later.",
           );
       },
     });
