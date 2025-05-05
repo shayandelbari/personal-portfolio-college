@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -46,6 +46,16 @@
     <main>
       <h1 class="text-center pt-4 pb-3">My Projects</h1>
       <div class="container">
+        <div class="row mb-4">
+          <div class="col-md-4 offset-md-8">
+            <div class="form-group">
+              <label for="category-filter">Filter by Category:</label>
+              <select class="form-control" id="category-filter">
+                <!-- Options will be dynamically populated by JavaScript -->
+              </select>
+            </div>
+          </div>
+        </div>
         <div class="row" id="projects-container">
           <!-- Cards will be dynamically generated here -->
         </div>
