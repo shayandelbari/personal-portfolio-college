@@ -14,7 +14,28 @@ const projects = [
     description: "C# Vehicle Management System.",
     details: "C# application that allows you to create different types of vehicles that are then stored in an array. The user can then choose to add, remove, or filter the vehicles based on different criteria",
   },
+  {
+    title: "Weather App",
+    description: "JavaScript Weather App.",
+    details: "A front-end app built with JavaScript that fetches real-time weather data from an API based on the user's inputted city name and displays temperature, humidity, and forecast.",
+  },
+  {
+    title: "To-Do List",
+    description: "Simple To-Do List App.",
+    details: "This is a minimalistic to-do list app built using HTML, CSS, and JavaScript that allows users to add, check off, and delete tasks.",
+  },
+  {
+    title: "Time Zone Checker",
+    description: "City Time Lookup Tool.",
+    details: "JavaScript-based tool that lets users enter a city and returns the current local time using a world time API.",
+  },
+  {
+    title: "Portfolio Website",
+    description: "Responsive Web Portfolio.",
+    details: "A responsive personal portfolio website built with HTML, CSS, Bootstrap, and JavaScript to showcase projects and skills.",
+  }
 ];
+
 
 const projectsContainer = document.getElementById("projects-container");
 
